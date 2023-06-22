@@ -1,30 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mostrar/Ocultar Div</title>
+    <title>Operaciones Matemáticas</title>
     <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
     <link href="miEstilo.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="misFunciones.js"></script>
 </head>
-<body>
+<body class="body-num">
 
-<h1> Mostrar/Ocultar Div </h1>
-<form>
-    <!--Es importante que los 2 radio button tengan el mismo name, porque eso les hace pertener a un mismo grupo-->
-    <!--Si un radio button se selecciona, el otro se deselecciona-->
-    <p>
-        <input id="mostrarDiv" type="radio" name="rad_mostrar-ocultar" value="val_mostrar">
-        <label for="mostrarDiv"> Mostrar Div </label>
-    </p>
-    <p>
-        <input id="ocultarDiv" type="radio" name="rad_mostrar-ocultar" value="val_ocultar">
-        <label for="ocultarDiv"> Ocultar Div </label>
-    </p>
-</form>
-
-<div name="unDiv" class="color-div">
-    <p>Este DIV contiene información que en ciertas ocasiones se desea ocultar.</p>
+<div class="centrado div-conver">
+    <h1>Operaciones Matemáticas</h1>
+    <form class="operacionesMat">
+        <p>
+            <input id="nums1" type="text" name="sum_num1" onchange="suma()">
+            +
+            <input id="nums2" type="text" name="sum_num2" onchange="suma()">
+            =
+            <span id="totalS" type="text" name="sum_total" disabled></span>
+        </p>
+        <p>
+            <input id="numr1" type="text" name="res_num1" onchange="resta()">
+            -
+            <input id="numr2" type="text" name="res_num2" onchange="resta()">
+            =
+            <span id="totalR" type="text" name="res_total" disabled></span>
+        </p>
+        <p>
+            <input id="numm1" type="text" name="mul_num1" onchange="multi()">
+            x
+            <input id="numm2" type="text" name="mul_num2" onchange="multi()">
+            =
+            <span id="totalM" type="text" name="mul_total" disabled></span>
+        </p>
+        <p>
+            <input id="numd1" type="text" name="div_num1" onchange="div()">
+            /
+            <input id="numd2" type="text" name="div_num2" onchange="div()">
+            =
+            <span id="totalD" type="text" name="div_total" disabled></span>
+        </p>
+    </form>
 </div>
-
 </body>
 </html>
